@@ -108,9 +108,9 @@ def pick(file):
             if evaluation < minimum_rej:
                 minimum_t = vector
                 minimum_rej = evaluation
-    torch.save(minimum_t, file)
-    with open("rejection_frac.txt", "w") as f:
-        f.write(str(minimum_rej))
+                torch.save(minimum_t, file)
+                with open("rejection_frac.txt", "w") as f:
+                    f.write(str(minimum_rej))
 
 
 pick("best_vector.pt")
